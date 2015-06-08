@@ -1,0 +1,107 @@
+<!--
+WARNING: THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+OVERWRITTEN AND LOST. Changes to this xml configuration should be made using:
+  virsh edit instance-00000050
+or other application using the libvirt API.
+-->
+
+<domain type='kvm'>
+  <name>instance-00000050</name>
+  <uuid>ebd5577b-14f7-46fd-8703-6a016ccc1dd8</uuid>
+  <metadata>
+    <nova:instance xmlns:nova="http://openstack.org/xmlns/libvirt/nova/1.0">
+      <nova:package version="2014.2.2"/>
+      <nova:name>Test windows</nova:name>
+      <nova:creationTime>2015-06-08 07:52:34</nova:creationTime>
+      <nova:flavor name="Large">
+        <nova:memory>4096</nova:memory>
+        <nova:disk>80</nova:disk>
+        <nova:swap>0</nova:swap>
+        <nova:ephemeral>0</nova:ephemeral>
+        <nova:vcpus>2</nova:vcpus>
+      </nova:flavor>
+      <nova:owner>
+        <nova:user uuid="1e51763c13a74308a5c1cb18b6f5595f">admin</nova:user>
+        <nova:project uuid="68f5ae7e997a426a81eca9bb345d15ee">admin</nova:project>
+      </nova:owner>
+      <nova:root type="image" uuid="212244ae-10bb-4e9b-a9fa-e1ddd72e0250"/>
+    </nova:instance>
+  </metadata>
+  <memory unit='KiB'>4194304</memory>
+  <currentMemory unit='KiB'>4194304</currentMemory>
+  <vcpu placement='static' cpuset='0-7'>2</vcpu>
+  <sysinfo type='smbios'>
+    <system>
+      <entry name='manufacturer'>OpenStack Foundation</entry>
+      <entry name='product'>OpenStack Nova</entry>
+      <entry name='version'>2014.2.2</entry>
+      <entry name='serial'>34353832-3336-435a-4a39-323441363852</entry>
+      <entry name='uuid'>ebd5577b-14f7-46fd-8703-6a016ccc1dd8</entry>
+    </system>
+  </sysinfo>
+  <os>
+    <type arch='x86_64' machine='pc-i440fx-trusty'>hvm</type>
+    <boot dev='hd'/>
+    <smbios mode='sysinfo'/>
+  </os>
+  <features>
+    <acpi/>
+    <apic/>
+  </features>
+  <cpu mode='host-model'>
+    <model fallback='allow'/>
+    <topology sockets='2' cores='1' threads='1'/>
+  </cpu>
+  <clock offset='utc'>
+    <timer name='pit' tickpolicy='delay'/>
+    <timer name='rtc' tickpolicy='catchup'/>
+  </clock>
+  <on_poweroff>destroy</on_poweroff>
+  <on_reboot>restart</on_reboot>
+  <on_crash>destroy</on_crash>
+  <devices>
+    <emulator>/usr/bin/qemu-system-x86_64</emulator>
+    <disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2' cache='none'/>
+      <source file='/var/lib/nova/instances/ebd5577b-14f7-46fd-8703-6a016ccc1dd8/disk'/>
+      <target dev='vda' bus='virtio'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x04' function='0x0'/>
+    </disk>
+    <controller type='usb' index='0'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x01' function='0x2'/>
+    </controller>
+    <controller type='pci' index='0' model='pci-root'/>
+    <interface type='bridge'>
+      <mac address='fa:16:3e:0a:00:19'/>
+      <source bridge='qbr7959edbb-8e'/>
+      <target dev='tap7959edbb-8e'/>
+      <model type='virtio'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x03' function='0x0'/>
+    </interface>
+    <serial type='file'>
+      <source path='/var/lib/nova/instances/ebd5577b-14f7-46fd-8703-6a016ccc1dd8/console.log'/>
+      <target port='0'/>
+    </serial>
+    <serial type='pty'>
+      <target port='1'/>
+    </serial>
+    <console type='file'>
+      <source path='/var/lib/nova/instances/ebd5577b-14f7-46fd-8703-6a016ccc1dd8/console.log'/>
+      <target type='serial' port='0'/>
+    </console>
+    <input type='tablet' bus='usb'/>
+    <input type='mouse' bus='ps2'/>
+    <input type='keyboard' bus='ps2'/>
+    <graphics type='vnc' port='-1' autoport='yes' listen='0.0.0.0' keymap='fr'>
+      <listen type='address' address='0.0.0.0'/>
+    </graphics>
+    <video>
+      <model type='cirrus' vram='9216' heads='1'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x02' function='0x0'/>
+    </video>
+    <memballoon model='virtio'>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
+      <stats period='10'/>
+    </memballoon>
+  </devices>
+</domain>

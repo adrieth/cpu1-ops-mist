@@ -1,0 +1,32 @@
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# Management network interface
+auto eth0
+iface eth0 inet static
+	address 10.8.99.2
+	netmask 255.255.240.0
+	gateway 10.8.97.1
+	dns-nameservers 8.8.8.8
+
+# Tunnel network interface
+auto eth1
+iface eth1 inet static
+	address 10.8.99.12
+	netmask 255.255.240.0
+	gateway 10.8.97.1
+	dns-nameservers 8.8.8.8
+
+# The storage network interface
+auto eth2
+iface eth2 inet static
+	address 10.8.99.22
+	netmask 255.255.240.0
+	gateway 10.8.97.1
+	dns-nameservers 8.8.8.8
+
+
