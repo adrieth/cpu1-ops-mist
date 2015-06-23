@@ -53,3 +53,5 @@ kvm:x:112:
 nova:x:113:
 libvirtd:x:114:cpu1,nova
 neutron:x:115:
+scanner:x:116:
+colord:x:117:

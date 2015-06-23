@@ -52,3 +52,5 @@ ntp:!::
 kvm:!::
 nova:!::
 libvirtd:!::cpu1,nova
+neutron:!::
+scanner:!::

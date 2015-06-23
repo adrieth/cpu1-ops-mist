@@ -30,6 +30,8 @@ text/html; /usr/bin/sensible-browser '%s'; description=HTML Text; nametemplate=%
 application/x-troff-man; /usr/bin/nroff -mandoc -Tutf8; copiousoutput; print=/usr/bin/nroff -mandoc -Tutf8 | print text/plain:-
 application/x-info; /usr/bin/info -f '%s'; needsterminal; description=GNU Info document
 text/plain; more '%s'; needsterminal
+x-scheme-handler/spice; remote-viewer %s; test=test -n "$DISPLAY"
+application/x-virt-viewer; remote-viewer %s; test=test -n "$DISPLAY"
 text/plain; view '%s'; edit=vim '%s'; compose=vim '%s'; test=test -x /usr/bin/vim; needsterminal
 text/plain; view '%s'; edit=vi '%s'; compose=vi '%s'; needsterminal
 text/*; less '%s'; needsterminal

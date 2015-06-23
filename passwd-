@@ -27,3 +27,4 @@ nova:x:106:113::/var/lib/nova:/bin/false
 libvirt-qemu:x:107:112:Libvirt Qemu,,,:/var/lib/libvirt:/bin/false
 libvirt-dnsmasq:x:108:114:Libvirt Dnsmasq,,,:/var/lib/libvirt/dnsmasq:/bin/false
 neutron:x:109:115::/var/lib/neutron:/bin/false
+colord:x:110:117::/var/lib/colord:/bin/false
