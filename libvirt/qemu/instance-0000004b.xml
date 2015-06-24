@@ -10,9 +10,9 @@ or other application using the libvirt API.
   <uuid>7091ca78-e70c-491e-8d51-e3399363b27b</uuid>
   <metadata>
     <nova:instance xmlns:nova="http://openstack.org/xmlns/libvirt/nova/1.0">
-      <nova:package version="2014.2.2"/>
+      <nova:package version="2014.2.3"/>
       <nova:name>Ubuntu TP</nova:name>
-      <nova:creationTime>2015-05-29 09:49:39</nova:creationTime>
+      <nova:creationTime>2015-06-23 14:37:58</nova:creationTime>
       <nova:flavor name="Medium">
         <nova:memory>2048</nova:memory>
         <nova:disk>40</nova:disk>
@@ -34,7 +34,7 @@ or other application using the libvirt API.
     <system>
       <entry name='manufacturer'>OpenStack Foundation</entry>
       <entry name='product'>OpenStack Nova</entry>
-      <entry name='version'>2014.2.2</entry>
+      <entry name='version'>2014.2.3</entry>
       <entry name='serial'>34353832-3336-435a-4a39-323441363852</entry>
       <entry name='uuid'>7091ca78-e70c-491e-8d51-e3399363b27b</entry>
     </system>
